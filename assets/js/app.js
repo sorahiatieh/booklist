@@ -1,4 +1,4 @@
-$(document).ready(function(){
+
     let $ = document
     const addBookBtn = $.querySelector('.add-btn')
     const titleInputElem = $.querySelector('#title')
@@ -9,11 +9,11 @@ $(document).ready(function(){
     let books = []
 
     addBookBtn.addEventListener('click', function (event) {
-        event.preventDefault()
+        event.preventDefault();
 
-        let titleInputValue = titleInputElem.value
-        let authorInputValue = authorInputElem.value
-        let yearInputValue = yearInputElem.value
+        let titleInputValue = titleInputElem.value;
+        let authorInputValue = authorInputElem.value;
+        let yearInputValue = yearInputElem.value;
 
 
 
@@ -32,7 +32,7 @@ $(document).ready(function(){
             setIntoLocalStorage(books)
         }
     })
-});
+
 
 function setIntoLocalStorage(allBooksArray) {
     localStorage.setItem('books', JSON.stringify(allBooksArray))
